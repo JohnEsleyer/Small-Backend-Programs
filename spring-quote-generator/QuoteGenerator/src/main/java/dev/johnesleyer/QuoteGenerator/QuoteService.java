@@ -27,4 +27,8 @@ public class QuoteService {
     public List<Quote> searchQuotesByAuthor(String author){
         return quoteRepository.findByAuthor(author);
     }
+
+    public Quote addQuote(Quote quote){
+        return quoteRepository.save(quote);
+    }
 }
